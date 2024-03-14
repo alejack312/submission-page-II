@@ -1,32 +1,251 @@
-  <!-- TO RUN IN BROWSER:
+<!-- TO RUN IN BROWSER:
     1. Install vscode extension Name: open in `browser open-in-browser` by TechER
     2. Right click html file and either run in default browser or another browser
   -->
-
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HTML/CSS Studio</title>
+    <title>AB-Testing</title>
     <!-- import CSS styles -->
-    <link rel="stylesheet" href="styles.css" /> 
+    <link rel="stylesheet" href="styles.css" />
   </head>
 
   <!-- page content goes into <body> -->
   <body>
-    <div id="logoBar">
-      <h1>Welcome to 100 Acre Wood!</h1>
-      <img id="siteLogo" alt="Pooh-bear site logo" src="./assets/Header.png"/>
-      <h3>We're glad you're here :D</h3>
-    </div>
-    <hr/>
-    <div id="staffGallery">
-      <img class="galleryImage" src="./assets/Eeyore-Eh.png"/>
-      <img class="galleryImage" src="./assets/Eeyore-Zz.png"/>
-      <img class="galleryImage" src="./assets/Kanga-Roo.png"/>
-      <img class="galleryImage" src="./assets/Owl-Phone.png"/>
+    <div class="main-column">
+      <div class="content">
+        <header class="page-heading">
+          <h1 class="title">AB-Testing</h1>
+
+          <nav class="menu">
+            <ul>
+              <li>
+                <a href="#part-one">Part 1: Data Collection (In Studio)</a>
+              </li>
+              <li><a href="#part-two">Part 2: Analysis </a></li>
+            </ul>
+          </nav>
+        </header>
+
+        <div class="intro">
+          <div class="self-descrip">
+            <h2 class="subheading" id="part-one">
+              Part 1: Data Collection (In Studio)
+            </h2>
+
+            <p class="inner-text">
+              The project aims to explore A/B testing and how to measure 
+              the effectiveness of different designs or versions of a website or 
+              application in achieving a specific goal, such as user engagement, 
+              conversion, or task completion. 
+              <br> </br> 
+              In this project, we make changes to the design of a website (B 
+              version) and compare its performance with the original design.
+              We want to measure the impact of the new design on the user's 
+              ability to complete a specific task—booking an appointment.
+              <br> </br>
+              A/B testing helps us quantify the impact of our design changes and
+              identify how the two variants perform in achieving the desired 
+              goal. This method allows for data-driven decision-making, 
+              providing valuable insights into the real-world performance of 
+              different designs and informing future design iterations or 
+              optimizations.
+            </p>
+
+            <div class="image">
+              <img
+                src="assets\Opera Snapshot_2024-03-07_165850_127.0.0.1.png"
+                alt="Photo of the 'About us' section on the original homepage"
+              />
+            </div>
+
+            <div class="image">
+              <img
+                src="assets\Opera Snapshot_2024-03-13_232456_docs.google.com.png"
+                alt="Photo of the 'About us' section on the original homepage"
+              />
+            </div>
+
+            <p class="inner-text">
+              I changed the design of the website to make the buttons
+              more prominent and the appointment times more visible. I also
+              highlighted the names of the doctors and separated each 
+              appointment by line dividers. I sorted the appointments by
+              chronological order, and lastly, darkend the text color of the 
+              appointment dates to make them more visible. 
+            </p>
+
+        <div class="proj-list" id="part-two">
+          <h2 class="subheading">Part 2: Analysis</h2>
+
+          <h3>Creating Hypotheses</h3>
+          <p class="inner-text">
+            Now that you’ve collected your own data and participated in testing
+            your other classmates’ designs in studio, reflect on the task and
+            create null and alternative hypotheses for each of the following 3
+            data types:
+          </p>
+
+          <h4>Misclick Rate</h4>
+          <p class="inner-text">
+            Null Hypothesis: There is no difference between the misclick rate
+            between the user groups using the old design and the new design.
+            <br> </br>
+            Alternative Hypothesis: There is a difference between the misclick 
+            rate between the user groups using the old design and the new 
+            design.
+          </p>
+
+          <h4>Time on Page</h4>
+          <p class="inner-text">
+            Null Hypothesis: There is no difference in the time spent on the
+            webpage between the user groups using the old design and the new
+            design. 
+            <br> </br>
+            Alternative Hypothesis: Users using the new design spend less time
+            on the webpage than users using the old design.
+          </p>
+
+          <h4>Number of Successes</h4>
+          <p class="inner-text">
+            Null Hypothesis: There is no difference in the number of successful 
+            completions between the old and new designs. 
+            <br> </br>
+            Alternative Hypothesis: The new design increases the number of 
+            successful completions compared to the old design.
+          </p>
+
+          <hr>
+
+          <p class="inner-text">
+            For the misclick rate, I predict that we will end up rejecting the 
+            null hypothesis in favor of the alternative hypothesis. This is 
+            because the new design likely includes improvements that reduce the 
+            likelihood of misclicks, such as better button design and clearer 
+            demarcations between appointments.
+            <br> </br>
+            Regarding the time on page, I predict that we will reject the null 
+            hypothesis in favor of the alternative hypothesis. The new design 
+            may have been optimized for better user experience, leading to less 
+            time needed to complete the task.
+            <br> </br>
+            For the number of successes, I predict that we will reject the null 
+            hypothesis in favor of the alternative hypothesis. The new feature 
+            was designed to be more intuitive and user-friendly, so it should
+            lead to more successful completions of the task.
+          </p>
+
+          <h3>About the Data</h3>
+
+          <h3>Run Statistical Tests on the Data</h3>
+
+          <div class="image">
+            <img
+              src="assets\Opera Snapshot_2024-03-13_231842_docs.google.com.png"
+              alt="Photo of the 'About us' section on the original homepage"
+            />
+          </div>
+
+          <p class="inner-text">
+            The chi-squared test was chosen to compare the misclick rate between 
+            versions A and B. This test is suitable for analyzing categorical 
+            data, which aligns with the nature of misclicks (occurring or not 
+            occurring).
+            <br> </br>
+            The p-value obtained is 0.1216, which is greater than the common 
+            significance level of 0.05. This suggests that there is no 
+            statistically significant difference in the misclick rates between 
+            versions A and B.
+            <br> </br>
+            The chi-squared statistic is 2.396, and with 1 degree of freedom, 
+            this value assists in assessing the significance of the differences 
+            between the observed and expected values in the misclick rates.
+            <br> </br>
+            Therefore, we fail to reject the null hypothesis, indicating that 
+            there is no statistically significant difference in the misclick 
+            rates between versions A and B.
+          </p>
+
+          <hr>
+
+          <p class="inner-text">
+            The t-test was chosen to compare the time spent on the webpage 
+            between versions A and B. This test is suitable for analyzing 
+            continuous data, which aligns with the nature of time spent on a 
+            webpage.
+            <br> </br>
+            The p-value obtained is 0.5776, which is greater than the common 
+            significance level of 0.05. This indicates that there is no 
+            statistically significant difference in the average time spent on 
+            the webpage between versions A and B.
+            <br> </br>
+            The t-score is 0.1967, and with 51.9976 degrees of freedom, this 
+            value helps in evaluating the difference in means and the 
+            variability within the data.
+            <br> </br>
+            Therefore, we fail to reject the null hypothesis, suggesting that 
+            there is no statistically significant difference in the time spent 
+            on the webpage between versions A and B.
+          </p>
+
+          <hr>
+
+          <p class="inner-text">
+            The chi-squared test was chosen to compare the number of successful 
+            completions between versions A and B. This test is suitable for 
+            analyzing categorical data, which aligns with the nature of 
+            successful completions (occurring or not occurring).
+            <br> </br>
+            The p-value obtained for the chi-squared test is 0.2751, which is 
+            greater than the common significance level of 0.05. This indicates 
+            that there is no statistically significant difference in the number 
+            of successful completions between versions A and B.
+            <br> </br>
+            The chi-squared statistic is 1.1913, and with 1 degree of freedom, 
+            this value helps in interpreting the significance of the differences 
+            between the observed and expected values in the successful 
+            completions.
+            <br> </br>
+            Therefore, we fail to reject the null hypothesis, signifying that 
+            there is no statistically significant difference in the number of 
+            successful completions between versions A and B.
+          </p>
+
+          <h3>Summary Statistics</h3>
+
+          <p class="inner-text"> 
+            For the misclick rate, we see that the new design did not 
+            significantly reduce the misclick rate. We see that the significant
+            association between the misclick rate and the design version is 0.1216. 
+            This means that the changes made to the new design did not 
+            significantly reduce the misclick rate. Therefore, the changes made
+            to the new design did not significantly reduce the misclick rate.
+          </p>
+
+          <p class="inner-text">
+            For the time spent on the page, we see that the new design did not
+            significantly reduce the time spent on the webpage. We see that on 
+            average, users spent 462.35192 more milliseconds on version A than
+            version B. However, analysis shows that there isn't a significant
+            difference. We think there is no difference because the difference 
+            in the averages in only 470 milliseconds, which is not significant
+            enough to reject the null hypothesis. This means the changes made to
+            the new design did not significantly reduce the time spent on the
+            webpage.
+          </p>
+
+          <p class="inner-text">
+            For the number of successful completions, we see that the new design
+            did not significantly increase the number of successful completions.
+            We see that the significant association between the number of
+            successful completions and the design version is 0.2751. This means
+            that the changes made to the new design did not significantly
+            increase the number of successful completions.
+          </p>
+        </div>
+      </div>
     </div>
   </body>
-
 </html>
